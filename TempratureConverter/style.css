@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --text-color: #495057;
+  --background-color: #ebfbee;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 0 3.2rem;
+}
+
+.img-calc {
+  width: 100%;
+}
+
+.calculator--portion {
+  border-top: 10px ridge #63e6be;
+  padding: 6.4rem;
+  box-shadow: 0 1.6rem 2.4rem rgba(0, 0, 0, 0.06);
+}
+
+.calculator--portion form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2.4rem;
+  column-gap: 3.2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.calculator--portion form label {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.calculator--portion form input{
+  height: 3.2rem;
+  font-weight: 400;
+}
+
+.calculator--portion form select{
+  height: 3.2rem;
+  font-weight: 400;
+}
+
+.calculator--portion form option {
+  height: 3.2rem;
+  font-weight: 400;
+}
+
+.calculator--portion form select {
+  padding: 0rem 1rem;
+}
+
+.calculator--portion form select:optional {
+  background-color: #ebfbee;
+  font-weight: 500;
+}
+
+.calculator--portion form button {
+  max-width: 75%;
+  background-color: #37b24d;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 0.8rem 2.4rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.calculator--portion form button:hover,
+.calculator--portion form button:visited {
+  background-color: #2f9e44;
+}
+
+.result--box {
+  padding: 2.4rem;
+}
+
+.result--box p {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 6.4rem;
+  text-align: center;
+}
+
+/*************************/
+/* MEDIA QUERIES */
+/***********************/
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 4.4rem;
+    margin: 2.4rem 0;
+  }
+  .container {
+    row-gap: 2.4rem;
+  }
+  .container .calculator--portion {
+    grid-column: 1 / -1;
+  }
+  .container .img--portion {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .input--layers {
+    display: flex;
+    align-items: space-around;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .calculator--portion form button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 3.2rem;
+    padding: 0px 20px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  html {
+    font-size: 50.5%;
+  }
+}
