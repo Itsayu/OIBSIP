@@ -23,7 +23,6 @@
   grid-template-columns: repeat(4,68px);
   box-shadow: inset 5px 5px 12px rgb(0, 0, 0),3px 3px 5px rgbrgb(0, 0, 0);
   height: 430px;
-  /* border: 3px solid lightblue; */
   border: 3px solid rgb(0, 0, 0);
   background: #050026;
 }
